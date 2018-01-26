@@ -6,12 +6,22 @@
 
 <ion-content padding>
   <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="months__block" *ngFor="let month of months let idx = index" >
+    <h2>{{  month.name }}</h2>
+    <!-- button and input -->
+    <div class="months__block-operations">
+      <input type="number" #valueInput  >
+      <input type="hidden" #valueMonth value="{{ idx }}" >
+      <button class="months__block-operations-add" (click)="addSum(valueMonth , valueInput.value, allTransactions)">add</button>
+      <button class="months__block-operations-subtraction" (click)="subtractionSum(valueMonth , valueInput.value, allTransactions) ">subtraction</button>
+    </div>
+    <!-- amount -->
+    <div class="months__block-amount">
+      <div class="">
+        <span>All operations: <span #allTransactions>:{{allTransactions.value}}</span></span>
+      </div>
+      <span> Total amount = {{ month.amount }} </span>
+    </div>
+    <hr>
+  </div>
 </ion-content>
