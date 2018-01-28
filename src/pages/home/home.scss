@@ -1,3 +1,41 @@
 page-home {
+  .page__months{
+    background-color: #f0f0f5;
+  }
+  .page__months-titile{
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .months__block{
+    padding: 20px 5px;
+    border-bottom: 1px solid darkgrey;
+  }
+  .months__block-operations-button{
+    width: 125px;
+    display: inline-block;
+    margin: 10px 8px 0 0;
+  }
+  .months__block-operations-input{
+    display: block;
+    width: 260px;
+    height: 30px;
+    padding-left: 7px;
+    border: 1px solid #488aff;
+    border-radius: 2px;
+  }
+  .months__block-amount{
+    margin-top: 20px;
+  }
+  .months__block-amount-all-transactions{
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .months__block-amount-total{
+    line-height: 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
 
 }

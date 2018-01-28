@@ -4,24 +4,25 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
+<ion-content class="page__months" padding>
+  <h2 class="page__months-titile">Welcome!</h2>
   <div class="months__block" *ngFor="let month of months let idx = index" >
     <h2>{{  month.name }}</h2>
     <!-- button and input -->
     <div class="months__block-operations">
-      <input type="number" #valueInput  >
-      <input type="hidden" #valueMonth value="{{ idx }}" >
-      <button class="months__block-operations-add" (click)="addSum(valueMonth , valueInput.value, allTransactions)">add</button>
-      <button class="months__block-operations-subtraction" (click)="subtractionSum(valueMonth , valueInput.value, allTransactions) ">subtraction</button>
+      <input class="months__block-operations-input" type="number" #valueInput />
+      <input type="hidden" #valueMonth value="{{ idx }}" />
+      <button class="months__block-operations-button" ion-button (click)="addSum(valueMonth , valueInput.value, allTransactions)">add</button>
+      <button class="months__block-operations-button" ion-button (click)="subtractionSum(valueMonth , valueInput.value, allTransactions) ">subtraction</button>
     </div>
     <!-- amount -->
     <div class="months__block-amount">
-      <div class="">
-        <span>All operations: <span #allTransactions>:{{allTransactions.value}}</span></span>
+      <div class="months__block-amount-all-transactions">
+        <span>All operations <span #allTransactions>:{{allTransactions.value}}</span></span>
       </div>
-      <span> Total amount = {{ month.amount }} </span>
+      <span class="months__block-amount-total"> Total amount = {{ month.value }} </span>
     </div>
-    <hr>
   </div>
 </ion-content>
+
+

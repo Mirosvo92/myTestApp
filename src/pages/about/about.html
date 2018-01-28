@@ -1,11 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Line chart
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-
+<ion-content class="page__charts" padding >
+  <div class="charts">
+    <div class="charts__content">
+      <ngx-charts-bar-vertical
+        [view]="view"
+        [scheme]="colorScheme"
+        [results]="data"
+        [gradient]="gradient"
+        [xAxis]="showXAxis"
+        [yAxis]="showYAxis"
+        [animations] = "animations">
+      </ngx-charts-bar-vertical>
+    </div>
+  </div>
 </ion-content>
+

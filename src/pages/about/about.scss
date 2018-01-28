@@ -1,3 +1,18 @@
 page-about {
 
+  .page__charts{
+    background-color: #f0f0f5;
+  }
+  .charts{
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    height: 250px;
+  }
+  .charts__content{
+    flex: 1 1 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
 }
