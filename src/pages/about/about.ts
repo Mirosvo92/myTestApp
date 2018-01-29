@@ -16,8 +16,6 @@ export class AboutPage{
   showYAxis = true;
   gradient = false;
   animations = false;
-  showXAxisLabel = true;
-  showYAxisLabel = true;
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };

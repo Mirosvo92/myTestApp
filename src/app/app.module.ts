@@ -5,9 +5,6 @@ import { MyApp } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxChartsModule} from '@swimlane/ngx-charts';
 
-
-
-
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';

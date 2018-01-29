@@ -12,8 +12,8 @@
     <div class="months__block-operations">
       <input class="months__block-operations-input" type="number" #valueInput />
       <input type="hidden" #valueMonth value="{{ idx }}" />
-      <button class="months__block-operations-button" ion-button (click)="addSum(valueMonth , valueInput.value, allTransactions)">add</button>
-      <button class="months__block-operations-button" ion-button (click)="subtractionSum(valueMonth , valueInput.value, allTransactions) ">subtraction</button>
+      <button class="months__block-operations-button" ion-button (click)="toDoOperation(valueMonth , valueInput.value, allTransactions, 'plus')">add</button>
+      <button class="months__block-operations-button" ion-button (click)="toDoOperation(valueMonth , valueInput.value, allTransactions) ">subtraction</button>
     </div>
     <!-- amount -->
     <div class="months__block-amount">

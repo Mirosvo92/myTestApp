@@ -2,12 +2,11 @@ import {Component} from '@angular/core';
 import {NavController, NavParams} from 'ionic-angular';
 import {ShareService} from '../../services/share/share';
 
-
-
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage{
 
   constructor(public navCtrl: NavController, public navParams: NavParams,public shareService: ShareService, ) {
@@ -29,43 +28,26 @@ export class HomePage{
     {name: 'December', value: 0}
   ];
 
-  addSum(valueMonth: HTMLInputElement , value: number, textAllTransactions: HTMLInputElement) {
+  toDoOperation(valueMonth: HTMLInputElement , value: number, textAllTransactions: HTMLInputElement, nameOperation?: string){
     // if value of input is empty
     if (!value) {
       return false;
     }
-    // add amount
-    this.months[valueMonth.value].value += Number(value);
-    // all operations
     if (!textAllTransactions.value){
       textAllTransactions.value = '';
+    }
+    if (nameOperation){
+      // add amount
+      this.months[valueMonth.value].value += Number(value);
+      // all operations text
       textAllTransactions.value +=  ' +' + value;
     }else{
-      textAllTransactions.value +=  ' +' + value;
-    }
-    this.shareService.setDataList(this.months);
-
-  }
-
-  subtractionSum(valueMonth: HTMLInputElement, value: number, textAllTransactions: HTMLInputElement) {
-    // if value of input is empty
-    if (!value) {
-      return false;
-    }
-    // add amount
-    this.months[valueMonth.value].value -= Number(value);
-    // all operations
-    if (!textAllTransactions.value){
-      textAllTransactions.value = '';
-      textAllTransactions.value +=  ' -' + value;
-    }else{
+      // add amount
+      this.months[valueMonth.value].value -= Number(value);
+      // all operations text
       textAllTransactions.value +=  ' -' + value;
     }
     this.shareService.setDataList(this.months);
   }
-
-
-
-
 
 }
